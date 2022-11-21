@@ -4,8 +4,35 @@
   <artifactId>JSFLoginDemo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  <dependencies>
+  
+  	<dependency>
+  		<groupId>org.primefaces</groupId>
+  		<artifactId>primefaces</artifactId>
+  		<version>8.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.sun.faces</groupId>
+  		<artifactId>jsf-api</artifactId>
+  		<version>2.2.0-m07</version>
+  	</dependency>
+  </dependencies>
+  <repositories> 
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>		
+   </repositories>
+  
   <build>
     <plugins>
+      <plugin>
+      	<groupId>org.apache.tomcat.maven</groupId>
+      	<artifactId>tomcat9-maven-plugin</artifactId>
+      	<version>9</version>
+      </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
@@ -19,5 +46,7 @@
         <version>3.2.3</version>
       </plugin>
     </plugins>
+     
   </build>
+ 
 </project>
